@@ -1,43 +1,165 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
+ <style>
+    h1 {
+      color: rgb(54, 23, 23);
+      font-family: verdana;
+      font-size: 600%;
+      text-align: center;
+      margin-top: 5px;
+    }
 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    @keyframes motion {
+      from {
+        color: red;
+      }
+      to {
+        color: yellow;
+      }
+    }
 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
+    .mot {
+      animation-name: motion;
+      animation-duration: 4;
+      animation-delay: 1;
+      animation-iteration-count: infinite;
+    }
+    body {
+      background-image: url("https://1330878074.rsc.cdn77.org/wp-content/uploads/2018/03/salesforce-8.jpg");
+      background-color: #cccccc;
+      background-repeat: no-repeat;
+    }
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+    .div1 {
+      display: flex;
+      flex-direction: column;
+    }
 
-<input type=hidden name="orgid" value="00D7R000000v5cc">
-<input type=hidden name="retURL" value="http://">
+    label {
+      font-size: 50px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      margin-left: 280px;
+    }
 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="akzholbek0096@gmail.com">                                        -->
-<!--  ----------------------------------------------------------------------  -->
+    input:hover {
+      background-color: rgb(171, 243, 243);
+    }
 
-<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+    .des:hover {
+      background-color: rgb(157, 240, 240);
+    }
 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+    input {
+      width: 50%;
+      padding: 20px 30px;
+      font-size: 30px;
+      box-sizing: border-box;
+      margin-left: 280px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
 
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+    .des {
+      width: 80%;
+      height: 200px;
+      font-size: 30px;
+      margin-left: 280px;
+      border-radius: 10px;
+    }
+    .submit {
+      width: 200px;
 
-<label for="priority">Priority</label><select  id="priority" name="priority"><option value="">--None--</option><option value="High">High</option>
-<option value="Medium">Medium</option>
-<option value="Low">Low</option>
-</select><br>
+      background-color: rgb(64, 115, 204);
+      font-weight: bold;
+      text-align: center;
+      color: rgb(0, 2, 2);
+    }
+    .submit:hover {
+      background-color: rgb(227, 60, 41);
+      width: 220px;
+      height: 80px;
+    }
+  </style>
+  <body>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
 
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 
-<label for="description">Description</label><textarea name="description"></textarea><br>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
 
-<input type="submit" name="submit">
+    <form
+      action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+      method="POST"
+    >
+      <input type="hidden" name="orgid" value="00D7R000000v5cc" />
+      <input type="hidden" name="retURL" value="http://" />
 
-</form>
+      <!--  ----------------------------------------------------------------------  -->
+      <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+      <!--  these lines if you wish to test in debug mode.                          -->
+      <!--  <input type="hidden" name="debug" value=1>                              -->
+      <!--  <input type="hidden" name="debugEmail"                                  -->
+      <!--  value="akzholbek0096@gmail.com">                                        -->
+      <!--  ----------------------------------------------------------------------  -->
+      <h1 class="mot" style="font-size: 60px">
+        Dear Tenant. Please fill out the form below
+      </h1>
+
+      <div class="div1">
+        <label for="name">Contact Name</label
+        ><input
+          placeholder="Your name"
+          id="name"
+          maxlength="80"
+          name="name"
+          size="20"
+          type="text"
+        />
+
+        <label for="email">Email</label
+        ><input
+          placeholder="example@"
+          id="email"
+          maxlength="80"
+          name="email"
+          size="20"
+          type="text"
+        />
+
+        <label for="phone">Phone</label
+        ><input
+          placeholder="+123548555"
+          id="phone"
+          maxlength="40"
+          name="phone"
+          size="20"
+          type="text"
+        />
+
+        <label for="subject">Subject</label
+        ><input
+          placeholder="Please write subject"
+          id="subject"
+          maxlength="80"
+          name="subject"
+          size="20"
+          type="text"
+        />
+
+        <label for="description">Description</label
+        ><textarea
+          class="des"
+          name="description"
+          placeholder="Please write your problem in detail"
+        ></textarea
+        ><br />
+
+        <input class="submit" type="submit" name="submit" />
+      </div>
+    </form>
+  </body>
